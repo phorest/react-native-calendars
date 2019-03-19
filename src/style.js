@@ -1,22 +1,24 @@
-export const foregroundColor = 'white';
-export const backgroundColor = '#f2F4f5'; // Agenda's reservations bg color
+import {Platform} from 'react-native';
 
-export const separatorColor = '#f2F4f5'; // not in use
-export const processedColor = '#a7e0a3'; // not in use
-export const processingColor = '#ffce5c'; // not in use
-export const failedColor = '#f67e7e'; // not in use
-export const textSecondaryColor = '#7a92a5'; // not in use
+export const foregroundColor = '#ffffff';
+export const backgroundColor = '#f4f4f4';
+export const separatorColor = '#e8e9ec';
+
+export const processedColor = '#a7e0a3';
+export const processingColor = '#ffce5c';
+export const failedColor = 'rgba(246, 126, 126,1)';
 
 export const textDefaultColor = '#2d4150';
 export const textColor = '#43515c';
-export const textLinkColor = '#00BBF2';
+export const textLinkColor = '#00adf5';
+export const textSecondaryColor = '#7a92a5';
 
 export const textDayFontFamily = 'System';
 export const textMonthFontFamily = 'System';
 export const textDayHeaderFontFamily = 'System';
 export const todayButtonFontFamily = 'System';
 
-export const textDayFontWeight = '300';
+export const textMonthFontWeight = '300';
 export const textMonthFontWeight = '300';
 export const textDayHeaderFontWeight = undefined;
 export const todayButtonFontWeight = '600';
@@ -50,6 +52,6 @@ export const indicatorColor = undefined; // use the default color of React Nativ
 export const agendaDayTextColor = '#7a92a5';
 export const agendaDayNumColor = '#7a92a5';
 export const agendaTodayColor = textLinkColor;
-export const agendaKnobColor = '#f2F4f5';
+export const agendaKnobColor = Platform.OS === 'ios' ? '#f2F4f5' : '#4ac4f7';
 export const todayButtonTextColor = textLinkColor;
 export const todayButtonPosition = undefined; // right' / 'left'(default)
