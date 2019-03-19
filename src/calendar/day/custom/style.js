@@ -10,13 +10,14 @@ export default function styleConstructor(theme = {}) {
       width: 50,
       height: 50,
       alignItems: 'center',
+      backgroundColor: '#f9fafb',
     },
     text: {
-      marginTop: Platform.OS === 'android' ? 4 : 6,
+      marginTop: Platform.OS === 'android' ? 14 : 16,
       fontSize: appStyle.textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
-      fontWeight: appStyle.textDayFontWeight,
-      color: appStyle.dayTextColor,
+      fontWeight: '500',
+      color: '#d1d6df',
       backgroundColor: 'rgba(255, 255, 255, 0)',
     },
     alignedText: {
