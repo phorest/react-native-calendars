@@ -8,17 +8,18 @@ export default function platformStyles(appStyle) {
       backgroundColor: appStyle.agendaKnobColor
     },
     weekdays: {
-      position: 'absolute',
+      position: "absolute",
       left: 0,
       right: 0,
       top: 0,
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      marginLeft: 15,
-      marginRight: 15,
-      paddingTop: 15,
-      paddingBottom: 7,
+      flexDirection: "row",
+      justifyContent: "space-around",
+      marginLeft: 0,
+      marginRight: 0,
+      paddingTop: 45,
+      paddingBottom: 5,
+      marginTop: 0,
       backgroundColor: appStyle.calendarBackground
-    },
+    }
   };
 }
