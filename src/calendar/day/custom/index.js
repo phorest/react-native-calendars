@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text, ImageBackground } from "react-native";
 import PropTypes from "prop-types";
-
 import styleConstructor from "./style";
 import { shouldUpdate } from "../../../component-updater";
 
@@ -72,17 +71,22 @@ class Day extends Component {
     }
 
     return (
-      <TouchableOpacity
-        style={containerStyle}
-        onPress={this.onDayPress}
-        onLongPress={this.onDayLongPress}
-        activeOpacity={marking.activeOpacity}
-        disabled={marking.disableTouchEvent}
+      <ImageBackground
+        source={require("../../../../../../resources/img/unavailableDateCalendar.png")}
+        style={{ width: 50, height: 50 }}
       >
-        <Text allowFontScaling={false} style={textStyle}>
-          {String(this.props.children)}
-        </Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={containerStyle}
+          onPress={this.onDayPress}
+          onLongPress={this.onDayLongPress}
+          activeOpacity={marking.activeOpacity}
+          disabled={marking.disableTouchEvent}
+        >
+          <Text allowFontScaling={false} style={textStyle}>
+            {String(this.props.children)}
+          </Text>
+        </TouchableOpacity>
+      </ImageBackground>
     );
   }
 }

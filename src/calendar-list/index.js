@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FlatList, Platform, Dimensions } from "react-native";
+import { FlatList, Platform, Dimensions, Text } from "react-native";
 import PropTypes from "prop-types";
 import XDate from "xdate";
 
@@ -100,7 +100,6 @@ class CalendarList extends Component {
   }
 
   scrollToDay(d, offset, animated) {
-    console.log("Scroll to Day");
     const day = parseDate(d);
     const diffMonths = Math.round(
       this.state.openDate
@@ -125,7 +124,6 @@ class CalendarList extends Component {
   }
 
   scrollToMonth(m) {
-    console.log("Scroll to Month");
     const month = parseDate(m);
     const scrollTo = month || this.state.openDate;
     let diffMonths = Math.round(
@@ -217,7 +215,6 @@ class CalendarList extends Component {
   }
 
   getMonthIndex(month) {
-    console.log("GET MONTH INDEX");
     let diffMonths = this.state.openDate.diffMonths(month) + this.props.pastScrollRange;
     return diffMonths;
   }
