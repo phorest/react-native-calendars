@@ -183,14 +183,14 @@ export default class AgendaView extends Component {
   }
 
   onVisibleMonthsChange(months) {
-    if (this.props.items && !this.state.firstResevationLoad) {
-      clearTimeout(this.scrollTimeout);
-      this.scrollTimeout = setTimeout(() => {
-        if (this.props.loadItemsForMonth && this._isMounted) {
-          this.props.loadItemsForMonth(months[months.length - 1]);
-        }
-      }, 200);
-    }
+    //if (this.props.items && !this.state.firstResevationLoad) {
+    clearTimeout(this.scrollTimeout);
+    this.scrollTimeout = setTimeout(() => {
+      if (this.props.loadItemsForMonth && this._isMounted) {
+        this.props.loadItemsForMonth(months[months.length - 1]);
+      }
+    }, 200);
+    //}
   }
 
   loadReservations(props) {
