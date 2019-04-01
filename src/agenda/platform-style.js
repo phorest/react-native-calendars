@@ -17,7 +17,7 @@ export default function platformStyles(appStyle) {
       paddingLeft: 24,
       paddingRight: 24,
       paddingTop: 30, // controls the space on top of the month/year in the agenda view
-      paddingBottom: 7, // controls the space below of the month/year in the agenda view
+      paddingBottom: 8, // controls the space below of the month/year in the agenda view
       backgroundColor: appStyle.calendarBackground
     }
   };

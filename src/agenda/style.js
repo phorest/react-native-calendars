@@ -37,8 +37,7 @@ export default function styleConstructor(theme = {}) {
       textAlign: "center",
       fontSize: 13,
       fontFamily: "Montserrat-Medium",
-      color: "#626e84",
-      color: appStyle.textSectionTitleColor
+      color: "#626e84"
     },
     month: {
       textAlign: "center",
