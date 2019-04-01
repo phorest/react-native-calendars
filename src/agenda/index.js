@@ -10,8 +10,8 @@ import ReservationsList from "./reservation-list";
 import styleConstructor from "./style";
 import { VelocityTracker } from "../input";
 
-const HEADER_HEIGHT = 155;
-const CALENDAR_OFFSET = 68; // 95 was a good one
+const HEADER_HEIGHT = 155; // the full agenda header heigh
+const CALENDAR_OFFSET = 68; // aligs the day in the correct space
 const KNOB_HEIGHT = 24;
 
 //Fallback when RN version is < 0.44
@@ -429,11 +429,28 @@ export default class AgendaView extends Component {
           {this.props.showWeekNumbers && (
             <Text allowFontScaling={false} style={this.styles.weekday} numberOfLines={1} />
           )}
-          {weekDaysNames.map((day, index) => (
-            <Text allowFontScaling={false} key={day + index} style={this.styles.weekday} numberOfLines={1}>
-              {day}
-            </Text>
-          ))}
+          <View
+            style={{
+              flexDirection: "column",
+              flex: 1,
+              alignItem: "center",
+              justifyContent: "center"
+            }}
+          >
+            <Text style={this.styles.month}>{parseDate(this.state.selectedDay).toString("MMMM yyyy")}</Text>
+            <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
+              {weekDaysNames.map((day, index) => (
+                <Text
+                  allowFontScaling={false}
+                  key={day + index}
+                  style={this.styles.weekday}
+                  numberOfLines={1}
+                >
+                  {day}
+                </Text>
+              ))}
+            </View>
+          </View>
         </Animated.View>
         <Animated.ScrollView
           ref={c => (this.scrollPad = c)}

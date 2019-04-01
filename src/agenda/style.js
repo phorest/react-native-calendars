@@ -36,7 +36,16 @@ export default function styleConstructor(theme = {}) {
       width: 32,
       textAlign: "center",
       fontSize: 13,
+      fontFamily: "Montserrat-Medium",
+      color: "#626e84",
       color: appStyle.textSectionTitleColor
+    },
+    month: {
+      textAlign: "center",
+      fontSize: 17,
+      fontFamily: "Montserrat-Medium",
+      color: "#626e84",
+      marginBottom: 10
     },
     reservations: {
       flex: 1,
