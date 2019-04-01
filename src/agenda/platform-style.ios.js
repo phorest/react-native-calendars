@@ -16,8 +16,8 @@ export default function platformStyles(appStyle) {
       justifyContent: "space-around",
       marginLeft: 0,
       marginRight: 0,
-      paddingTop: 20, // controls the space on top of the month/year in the agenda view
-      paddingBottom: 10, // controls the space below of the month/year in the agenda view
+      paddingTop: 25, // controls the space on top of the month/year in the agenda view
+      paddingBottom: 5, // controls the space below of the month/year in the agenda view
       marginTop: 0,
       backgroundColor: appStyle.calendarBackground
     }

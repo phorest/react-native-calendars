@@ -8,7 +8,6 @@ import dateutils from '../../dateutils';
 import styleConstructor from './style';
 import {RESERVATION_DATE} from '../../testIDs';
 
-
 class Reservation extends Component {
   static displayName = 'IGNORE';
 
@@ -48,14 +47,16 @@ class Reservation extends Component {
     if (date) {
       return (
         <View style={this.styles.day} testID={RESERVATION_DATE}>
-          <Text allowFontScaling={false} style={[this.styles.dayNum, today]}>{date.getDate()}</Text>
-          <Text allowFontScaling={false} style={[this.styles.dayText, today]}>{XDate.locales[XDate.defaultLocale].dayNamesShort[date.getDay()]}</Text>
+          <Text allowFontScaling={false} style={[this.styles.dayNum, today]}>
+            {date.getDate()}
+          </Text>
+          <Text allowFontScaling={false} style={[this.styles.dayText, today]}>
+            {XDate.locales[XDate.defaultLocale].dayNamesShort[date.getDay()]}
+          </Text>
         </View>
       );
     } else {
-      return (
-        <View style={this.styles.day}/>
-      );
+      return <View style={this.styles.day} />;
     }
   }
 
@@ -73,9 +74,7 @@ class Reservation extends Component {
     return (
       <View style={this.styles.container}>
         {this.renderDate(date, reservation)}
-        <View style={{flex: 1}}>
-          {content}
-        </View>
+        <View style={{flex: 1}}>{content}</View>
       </View>
     );
   }
