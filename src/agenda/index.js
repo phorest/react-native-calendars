@@ -255,6 +255,15 @@ export default class AgendaView extends Component {
   }
 
   chooseDay(d, optimisticScroll) {
+    // if there is no marker, don't do anything
+    console.log("Choose Day " + JSON.stringify(d));
+    if (!Object.keys(this.props.markedDates).includes(d.dateString)) {
+      if (this.props.loadItemsForMonth) {
+        this.props.loadItemsForMonth(xdateToData(parseDate(d)));
+      }
+      return;
+    }
+
     const day = parseDate(d);
     this.setState({
       calendarScrollable: false,
