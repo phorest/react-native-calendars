@@ -41,6 +41,13 @@ export default function styleConstructor(theme = {}) {
       fontFamily: appStyle.textDayHeaderFontFamily,
       fontWeight: appStyle.textDayHeaderFontWeight,
     },
+    month: {
+      textAlign: 'center',
+      fontSize: 17,
+      fontFamily: 'Montserrat-Medium',
+      color: '#626e84',
+      marginBottom: 10,
+    },
     reservations: {
       flex: 1,
       marginTop: 155,
