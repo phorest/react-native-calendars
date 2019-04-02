@@ -17,7 +17,7 @@ export default function platformStyles(appStyle) {
       marginLeft: 0,
       marginRight: 0,
       paddingTop: 25, // controls the space on top of the month/year in the agenda view
-      paddingBottom: 5, // controls the space below of the month/year in the agenda view
+      paddingBottom: 7, // agenda view, if you see cells on top of selected week or cropped selected week
       marginTop: 0,
       backgroundColor: appStyle.calendarBackground
     }
