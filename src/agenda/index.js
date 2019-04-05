@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
-import {Text, View, Dimensions, Animated, ViewPropTypes} from 'react-native';
+import {
+  Text,
+  View,
+  Dimensions,
+  Animated,
+  ViewPropTypes,
+  Platform,
+} from 'react-native';
 import PropTypes from 'prop-types';
 import XDate from 'xdate';
 
@@ -12,7 +19,7 @@ import {VelocityTracker} from '../input';
 import {AGENDA_CALENDAR_KNOB} from '../testIDs';
 
 const HEADER_HEIGHT = 155; // the full agenda header heigh
-const CALENDAR_OFFSET = 68; // aligs the day in the correct space
+const CALENDAR_OFFSET = Platform.OS === 'ios' ? 68 : 76; // aligs the day in the correct space  for ios
 const KNOB_HEIGHT = 24;
 // Fallback when RN version is < 0.44
 const viewPropTypes = ViewPropTypes || View.propTypes;
@@ -278,7 +285,7 @@ export default class AgendaView extends Component {
 
   chooseDay(d, optimisticScroll) {
     // if there is no marker, don't do anything
-    console.log("Choose Day " + JSON.stringify(d));
+    console.log('Choose Day ' + JSON.stringify(d));
     if (!Object.keys(this.props.markedDates).includes(d.dateString)) {
       if (this.props.loadItemsForMonth) {
         this.props.loadItemsForMonth(xdateToData(parseDate(d)));
