@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, Dimensions, Animated, ViewPropTypes } from "react-native";
+import { Text, View, Dimensions, Animated, ViewPropTypes, Platform } from "react-native";
 import PropTypes from "prop-types";
 import XDate from "xdate";
 
@@ -11,7 +11,7 @@ import styleConstructor from "./style";
 import { VelocityTracker } from "../input";
 
 const HEADER_HEIGHT = 155; // the full agenda header heigh
-const CALENDAR_OFFSET = 68; // aligs the day in the correct space
+const CALENDAR_OFFSET = Platform.OS === "ios" ? 68 : 76; // aligs the day in the correct space  for ios
 const KNOB_HEIGHT = 24;
 
 //Fallback when RN version is < 0.44
