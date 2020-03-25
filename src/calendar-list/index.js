@@ -68,7 +68,7 @@ class CalendarList extends Component {
   static defaultProps = {
     horizontal: false,
     calendarWidth: width,
-    calendarHeight: 400,
+    calendarHeight: 405, // magic number updated from 400 by nic to support 6 rows months
     pastScrollRange: 50,
     futureScrollRange: 50,
     showScrollIndicator: false,

@@ -18,8 +18,8 @@ import styleConstructor from './style';
 import {VelocityTracker} from '../input';
 import {AGENDA_CALENDAR_KNOB} from '../testIDs';
 
-const HEADER_HEIGHT = 155; // the full agenda header heigh
-const CALENDAR_OFFSET = Platform.OS === 'ios' ? 68 : 76; // aligs the day in the correct space  for ios
+const HEADER_HEIGHT = 150; // the full agenda header heigh
+const CALENDAR_OFFSET = Platform.OS === 'ios' ? 80 : 86; //Platform.OS === 'ios' ? 68 : 76; // aligs the day in the correct space  for ios
 const KNOB_HEIGHT = 24;
 // Fallback when RN version is < 0.44
 const viewPropTypes = ViewPropTypes || View.propTypes;
