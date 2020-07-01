@@ -274,13 +274,12 @@ class CalendarList extends Component {
   }
 
   getMonthIndex(month) {
-    console.log('GET MONTH INDEX');
     let diffMonths =
       this.state.openDate.diffMonths(month) + this.props.pastScrollRange;
     return diffMonths;
   }
 
-  addMonth = count => {
+  addMonth = (count) => {
     this.updateMonth(this.state.currentMonth.clone().addMonths(count, true));
   };
 
