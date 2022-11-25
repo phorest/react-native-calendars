@@ -16,9 +16,10 @@ import CalendarListItem from './item';
 import CalendarHeader from '../calendar/header/index';
 
 const CALENDAR_WIDTH = constants.screenWidth;
-const CALENDAR_HEIGHT = 360;
+const CALENDAR_HEIGHT = 405;
 const PAST_SCROLL_RANGE = 50;
 const FUTURE_SCROLL_RANGE = 50;
+const CELL_HEIGHT = 55;
 
 export interface CalendarListProps extends CalendarProps, Omit<FlatListProps<any>, 'data' | 'renderItem'> {
   /** Max amount of months allowed to scroll to the past. Default = 50 */
@@ -162,7 +163,7 @@ const CalendarList = (props: CalendarListProps, ref: any) => {
       for (let i = 0; i < days.length; i++) {
         week = Math.floor(i / 7);
         if (sameDate(days[i], scrollTo)) {
-          scrollAmount += 46 * week;
+          scrollAmount += CELL_HEIGHT * week;
           break;
         }
       }
