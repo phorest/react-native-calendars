@@ -257,8 +257,8 @@ class ReservationList extends Component<ReservationListProps, State> {
   };
 
   keyExtractor = (item: DayAgenda, index: number) => {
-    return this.props.reservationsKeyExtractor?.(item, index) || `${item?.reservation?.day}${index}`;
-  };
+    return this.props.reservationsKeyExtractor?.(item, index) || `${item?.reservation?.date}${index}`;
+  }
 
   render() {
     const {items, selectedDay, theme, style} = this.props;
