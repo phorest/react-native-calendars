@@ -170,7 +170,7 @@ const CalendarList = (props: CalendarListProps, ref: any) => {
     }
 
     if (scrollAmount !== 0) {
-      // @ts-expect-error
+      // @ts-ignore
       list?.current?.scrollToOffset({offset: scrollAmount, animated});
     }
   };
@@ -181,7 +181,7 @@ const CalendarList = (props: CalendarListProps, ref: any) => {
     const scrollAmount = calendarSize * pastScrollRange + diffMonths * calendarSize;
 
     if (scrollAmount !== 0) {
-      // @ts-expect-error
+      // @ts-ignore
       list?.current?.scrollToOffset({offset: scrollAmount, animated: animateScroll});
     }
   }, [calendarSize]);
@@ -234,7 +234,7 @@ const CalendarList = (props: CalendarListProps, ref: any) => {
         markedDates={getMarkedDatesForItem(item)}
         item={item}
         style={calendarStyle}
-        // @ts-expect-error - type mismatch - ScrollView's 'horizontal' is nullable
+        // @ts-ignore - type mismatch - ScrollView's 'horizontal' is nullable
         horizontal={horizontal}
         calendarWidth={calendarWidth}
         calendarHeight={calendarHeight}
@@ -284,7 +284,7 @@ const CalendarList = (props: CalendarListProps, ref: any) => {
   return (
     <View style={style.current.flatListContainer} testID={testID}>
       <FlatList
-        // @ts-expect-error
+        // @ts-ignore
         ref={list}
         style={listStyle}
         showsVerticalScrollIndicator={showScrollIndicator}

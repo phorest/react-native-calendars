@@ -18,7 +18,7 @@ import {
 import {extractCalendarListProps, extractReservationListProps} from '../componentUpdater';
 import {xdateToData, toMarkingFormat, parseDate} from '../interface';
 import {sameDate, sameMonth} from '../dateutils';
-// @ts-expect-error
+// @ts-ignore
 import {AGENDA_CALENDAR_KNOB} from '../testIDs';
 import {VelocityTracker} from '../velocityTracker';
 import {DateData, AgendaSchedule} from '../types';

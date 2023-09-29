@@ -64,7 +64,7 @@ export default function styleConstructor(theme: Theme = {}) {
     inactiveText: {
       color: appStyle.textInactiveColor
     },
-    // @ts-expect-error
+    // @ts-ignore
     ...(theme['stylesheet.day.period'] || {})
   });
 }

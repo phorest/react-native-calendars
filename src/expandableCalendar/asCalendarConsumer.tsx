@@ -1,5 +1,5 @@
 import React, {Component, Ref} from 'react';
-// @ts-expect-error
+// @ts-ignore
 import hoistNonReactStatic from 'hoist-non-react-statics';
 import CalendarContext from './Context';
 

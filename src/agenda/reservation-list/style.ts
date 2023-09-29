@@ -37,7 +37,7 @@ export default function styleConstructor(theme: Theme = {}) {
     indicator: {
       marginTop: 80
     },
-    // @ts-expect-error
+    // @ts-ignore
     ...(theme['stylesheet.agenda.list'] || {})
   });
 }

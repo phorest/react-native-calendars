@@ -95,9 +95,8 @@ export interface Theme {
 }
 
 export type AgendaEntry = {
-  name: string;
-  height: number;
-  day: string;
+  date: string
+  availabilities: object[]
 }
 
 export type AgendaSchedule = {
