@@ -85,9 +85,6 @@
     "shell-utils": "1.x.x",
     "typescript": "4.8.4"
   },
-  "optionalDependencies": {
-    "moment": "^2.29.4"
-  },
   "jest": {
     "preset": "react-native",
     "setupFiles": [
